@@ -261,6 +261,7 @@ export const PrismEditor = Vue.extend({
       input.selectionStart = record.selectionStart;
       input.selectionEnd = record.selectionEnd;
 
+      this.codeData = record.value;
       this.$emit('input', record.value);
       // this.props.onValueChange(record.value);
     },
@@ -275,6 +276,7 @@ export const PrismEditor = Vue.extend({
         },
         true
       );
+      this.codeData = value;
       this.$emit('input', value);
       // this.props.onValueChange(value);
     },
